@@ -8,7 +8,7 @@ const BlogForm = ({ initialData, onSubmit, onCancel }) => {
     excerpt: '',
     content: '',
     author: '',
-    imageUrl: '/api/placeholder/800/400',
+    imageUrl: '',
     videoUrl: '',
     tags: ''
   });
@@ -30,7 +30,7 @@ const BlogForm = ({ initialData, onSubmit, onCancel }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process tags: convert from string to array
+    // Process tags: convert from string to an array
     const processedData = {
       ...formData,
       tags: formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag)

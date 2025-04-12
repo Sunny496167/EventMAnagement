@@ -1,8 +1,8 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-//import { EventProvider } from './contexts/EventContext';
-//import { BlogProvider } from './context/BlogContext'; // Adjust import path if needed
+import { BlogProvider } from './contexts/BlogContext';
+import AdminBlogEdit from './pages/AdminBlogEdit';
 
 // Import pages
 import Home from './pages/Home';
@@ -13,8 +13,7 @@ import BlogPage from './pages/BlogPage';
 import NewsPage from './pages/NewsPage';
 import BlogAdminPage from './pages/BlogAdminPage';
 import { EventProvider } from './contexts/EventContext';
-import { BlogProvider } from './contexts/BlogContext';
-import AdminBlogEdit from './pages/AdminBlogEdit';
+
 
 const App = () => {
   return (

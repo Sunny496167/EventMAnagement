@@ -5,7 +5,7 @@ import { useBlogContext } from '../contexts/BlogContext';
 import BlogForm from '../components/BlogForm';
 
 const AdminBlogEdit = () => {
-  const { id } = useParams(); // The route parameter. Use 'new' to create, otherwise edit.
+  const { id } = useParams(); // Use 'new' to create, otherwise edit an existing blog.
   const navigate = useNavigate();
   const { getBlogById, addBlog, updateBlog } = useBlogContext();
   const isEditing = id && id !== 'new';

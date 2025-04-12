@@ -22,7 +22,7 @@ const EventPage = () => {
       } else {
         setError('Event not found');
       }
-    } catch (err) {
+    } catch {
       setError('Failed to load event details');
     } finally {
       setLoading(false);

@@ -23,7 +23,7 @@ const AdminEventEdit = () => {
         } else {
           setError('Event not found');
         }
-      } catch (err) {
+      } catch{
         setError('Failed to load event');
       } finally {
         setLoading(false);
@@ -51,7 +51,7 @@ const AdminEventEdit = () => {
       setTimeout(() => {
         navigate('/admin');
       }, 500);
-    } catch (err) {
+    } catch {
       setError('Failed to save event. Please try again.');
     } finally {
       setSubmitting(false);

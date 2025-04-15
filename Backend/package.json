@@ -14,12 +14,16 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "fs": "^0.0.1-security",
     "helmet": "^8.1.0",
     "http-status-codes": "^2.3.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.8.6",
     "multer": "^1.4.5-lts.2",
     "multer-storage-cloudinary": "^4.0.0",
+    "path": "^0.12.7",
+    "sharp": "^0.34.1",
+    "slugify": "^1.6.6",
     "validator": "^13.9.0"
   },
   "devDependencies": {

@@ -6,12 +6,12 @@ const helmet = require('helmet');
 const cors = require('cors');
 const path = require('path');
 
-
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const mediaRoutes = require('./routes/mediaRoutes');
 const userRoutes = require('./routes/userRoutes');
+const blogRoutes = require('./routes/blogRoutes');
 
 const errorHandler = require('./middleware/errorHandler');
 
@@ -48,6 +48,7 @@ app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/events', eventRoutes);
 app.use('/api/v1/media', mediaRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/blogs', blogRoutes);  // Add blog routes
 
 // Handle 404 errors
 app.all('*', (req, res) => {

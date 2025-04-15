@@ -2,13 +2,18 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
 
-const newsSchema = new mongoose.Schema(
+const blogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: [true, 'A blog must have a title'],
       trim: true,
       maxlength: [100, 'A blog title must have less than 100 characters']
+    },
+    slug: String,
+    content: {
+      type: String,
+      required: [true, 'A blog must have content']
     },
     summary: {
       type: String,
@@ -18,6 +23,10 @@ const newsSchema = new mongoose.Schema(
     coverImage: {
       type: String,
       default: 'default-blog.jpg'
+    },
+    author: {
+      type: String,
+      required: [true, 'A blog must have an author']
     },
     publishedAt: {
       type: Date,
@@ -31,7 +40,21 @@ const newsSchema = new mongoose.Schema(
   }
 );
 
+// DOCUMENT MIDDLEWARE: runs before .save() and .create()
+blogSchema.pre('save', function(next) {
+  this.slug = slugify(this.title, { lower: true });
+  next();
+});
 
-const News = mongoose.model('News', newsSchema);
+// QUERY MIDDLEWARE
+blogSchema.pre(/^find/, function(next) {
+  this.populate({
+    path: 'author',
+    select: 'name photo'
+  });
+  next();
+});
 
-module.exports = News;
+const Blog = mongoose.model('Blog', blogSchema);
+
+module.exports = Blog;

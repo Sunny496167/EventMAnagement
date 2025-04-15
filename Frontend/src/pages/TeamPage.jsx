@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTeamContext } from '../contexts/TeamContext';
 import CategoryFilter from '../components/CategoryFilter';
-import TeamDetail from '../components/TeamDetails';
 import TeamList from '../components/TeamList';
+import TeamDetail from '../components/TeamDetails';
 
 const TeamPage = () => {
   const { id } = useParams();

@@ -1,5 +1,6 @@
 // components/TeamCard.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TeamCard = ({ member }) => {
   return (
@@ -16,6 +17,11 @@ const TeamCard = ({ member }) => {
         <h3 className="text-xl font-semibold mb-2">{member.fullName}</h3>
         <p className="text-gray-600 mb-2">{member.position}</p>
         <p className="text-gray-500 text-sm">{member.introduction}</p>
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-500">
+            {new Date(member.publishedAt).toLocaleDateString()}
+          </span>
+        </div>
       </div>
     </div>
   );

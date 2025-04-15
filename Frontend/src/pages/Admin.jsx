@@ -224,18 +224,18 @@ const Admin = () => {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Admin Dashboard</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Events</h2>
           <p className="text-gray-600 mb-4">Manage your events, schedules, and locations.</p>
           <Link 
-            to="/admin/event/new" 
+            to="/admin/event/new"
             className="block text-center w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mb-2"
           >
             Add New Event
           </Link>
           <Link 
-            to="/admin" 
+            to="/admin"
             className="block text-center w-full px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
           >
             Manage Events
@@ -246,13 +246,13 @@ const Admin = () => {
           <h2 className="text-xl font-semibold mb-4">Blog Posts</h2>
           <p className="text-gray-600 mb-4">Create and manage your blog content.</p>
           <Link 
-            to="/admin/blog/new" 
+            to="/admin/blog/new"
             className="block text-center w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mb-2"
           >
             Add New Blog
           </Link>
           <Link 
-            to="/admin/blog" 
+            to="/admin/blog"
             className="block text-center w-full px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
           >
             Manage Blogs
@@ -263,16 +263,33 @@ const Admin = () => {
           <h2 className="text-xl font-semibold mb-4">News</h2>
           <p className="text-gray-600 mb-4">Publish and manage news articles.</p>
           <Link 
-            to="/admin/news/new" 
+            to="/admin/news/new"
             className="block text-center w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mb-2"
           >
             Add News Article
           </Link>
           <Link 
-            to="/admin/news" 
+            to="/admin/news"
             className="block text-center w-full px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
           >
             Manage News
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4">Team</h2>
+          <p className="text-gray-600 mb-4">Manage team members and profiles.</p>
+          <Link 
+            to="/admin/teams/new"
+            className="block text-center w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mb-2"
+          >
+            Add Team Member
+          </Link>
+          <Link 
+            to="/admin/teams"
+            className="block text-center w-full px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
+          >
+            Manage Team
           </Link>
         </div>
       </div>
